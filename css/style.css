@@ -1,3 +1,9 @@
+/* DESAFÍO 4
+1. Incluí transición de pseudoclase hover en botones del menú de navegación
+2. Utitilcé transform para ajustar la posición de los textos en la portada
+3. Utilicé transform y transition para animar el botón "Reservar" de la portada*/
+
+
 /* Reset */
 * {
     margin: 0%;
@@ -261,6 +267,7 @@ nav ul li a {
     font-size: 16px;
 }
 
+/*DESAFÍO 4*/
 .navItem:hover {
     background: #4B80B1;
     color: #ffffff;
@@ -288,26 +295,36 @@ nav ul li a {
     position: absolute;
     top: 25px;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); /*DESAFÍO 4*/
 }
 
 .portadaSubtitutulo {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); /*DESAFÍO 4*/
 }
 
 .portadaBoton {
+    background-color: #ffffff;
+    color: #4B80B1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); /*DESAFÍO 4*/
+    transition: transform 3s;
+}
+
+.portadaBoton:hover {
+    background-color: #4B80B1;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(1.2) ; /*DESAFÍO 4*/
 }
 
 button {
-    background-color: #ffffff;
-    color: #505D6F;
     padding: 5px;
     width: 228px;
     height: 38px;
