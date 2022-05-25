@@ -1,9 +1,3 @@
-/* DESAFÍO 4
-1. Incluí transición de pseudoclase hover en botones del menú de navegación
-2. Utitilcé transform para ajustar la posición de los textos en la portada
-3. Utilicé transform y transition para animar el botón "Reservar" de la portada*/
-
-
 /* Reset */
 * {
     margin: 0%;
@@ -12,17 +6,12 @@
 
 /* ---------------- INICIO - Estructura general del sitio ---------------- */
 body {
-    width: 100%;
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
 }
 
 body section {
     display: flex;
-    /* align-content: center;
-    justify-content: center; */
 }
-
 
 .sectionName {
     background-color: #4B80B1;
@@ -46,8 +35,8 @@ body section {
 .destacado {
     background-color: #4B80B1;
     color: #ffffff;
-    text-align: center;
     padding: 20px;
+    height: 86px;
 }
 
 footer {
@@ -60,7 +49,7 @@ footer {
 }
 
 /* Vista Desktop */
-@media screen and (min-width:768px) {
+@media screen and (min-width:992px) {
 
     /* GRILLA HOME */
     .grillaHome {
@@ -73,7 +62,7 @@ footer {
             "clima clima texto texto testimonio testimonio"
             "footer footer footer footer footer footer";
         grid-template-columns: repeat (6, 2fr);
-        grid-template-rows: auto 75px auto 58px 200px 50px;
+        grid-template-rows: auto 75px auto 86px 300px 50px;
     }
 
     .topBar {
@@ -126,10 +115,46 @@ footer {
         font-weight: normal;
         text-align: center;
     }
+
+    .grillaPage {
+        display: grid;
+        grid-template-areas:
+            "topBar topBar topBar topBar topBar topBar"
+            "navLogo navLogo nav nav nav nav"
+            "name name name name name name"
+            "main main main main main main"
+            "footer footer footer footer footer footer";
+        grid-template-columns: (6, 2fr);
+        grid-template-rows: auto 75px 58px auto 50px;
+    }
+
+    .topBar {
+        grid-area: topBar;
+    }
+
+    .navLogo {
+        grid-area: navLogo;
+    }
+
+    .nav {
+        grid-area: nav;
+    }
+
+    .sectionName {
+        grid-area: name;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }
 
-/* Visa Responsive */
-@media screen and (max-width:768px) {
+/* Vista mobile */
+@media screen and (max-width:575px) {
 
     /* GRILLA HOME */
     .grillaHome {
@@ -227,6 +252,11 @@ footer {
     }
 }
 
+/* Vista Tablet PENDIENTE DE ARMADO */
+/* @media screen and (min-width:576px) and (max-width:991px) {
+
+} */
+
 .bold {
     font-weight: bold;
 }
@@ -267,7 +297,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/*DESAFÍO 4*/
+
 .navItem:hover {
     background: #4B80B1;
     color: #ffffff;
@@ -281,7 +311,7 @@ nav ul li a {
 
 /* ---------------- FIN Navegador principal ---------------- */
 
-/* ---------------- Elementos de portada ---------------- */
+/* ---------------- Elementos de portada OCULTOS PARA PODER TRABAJAR BOOTSTRAP---------------- */
 .portada {
     width: 100%;
     height: 100%;
@@ -295,14 +325,14 @@ nav ul li a {
     position: absolute;
     top: 25px;
     left: 50%;
-    transform: translate(-50%, 50%); /*DESAFÍO 4*/
+    transform: translate(-50%, 50%);
 }
 
 .portadaSubtitutulo {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, 50%); /*DESAFÍO 4*/
+    transform: translate(-50%, 50%);
 }
 
 .portadaBoton {
@@ -311,7 +341,7 @@ nav ul li a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%); /*DESAFÍO 4*/
+    transform: translate(-50%, 50%);
     transition: transform 3s;
 }
 
@@ -321,7 +351,7 @@ nav ul li a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%) scale(1.2) ; /*DESAFÍO 4*/
+    transform: translate(-50%, 50%) scale(1.2) ;
 }
 
 button {
