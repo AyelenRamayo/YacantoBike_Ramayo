@@ -19,26 +19,45 @@
     <header class="topBar">
         <span>Alquiler de biciletas en Villa Yacanto de Calamuchita</span>
     </header>
-    <div class="navLogo">
-        <a href="../index.html"><img src="../img/logo-yacanto-bike.png" alt="Logo Yacanto Bike"
-                title="Logo Yacanto Bike"></a>
-    </div>
-    <nav class="nav">
-        <!-- Navegador Desktop-->
-        <ul class="navPrincipal">
-            <li><a class="navItem" href="../index.html">Inicio</a></li>
-            <li><a class="navItem" href="./Recorridos.html">Recorridos</a></li>
-            <li><a class="navItem" href="./Bicicletas.html">Bicicletas</a></li>
-            <li><a class="navItem" href="./Nosotros.html">Nosotros</a></li>
-            <li><a class="navItem" href="./Contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+
+        <!-- BOOTSTRAP - Navegador Responsive-->
+
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color:#fff;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo-yacanto-bike.png" alt="Logo Yacanto Bike"
+                    title="Logo Yacanto Bike"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Recorridos.html">Recorridos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Bicicletas.html">Bicicletas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
     <section class="sectionName">
         <h2> >> Contacto </h2>
     </section>
+    <!-- Contenedores CONTENIDOS OCULTOS PARA TRABAJAR CAJAS-->
     <main class="container">
         <section>
-            <form action="" method="" enctype="">
+            <!-- <form action="" method="" enctype="">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" value="Nombre">
                 <label for="telefono">Teléfono</label>
@@ -60,11 +79,11 @@
                 <textarea name="comentarios" id="comentarios" cols="50" rows="10"
                     placeholder="Podés dejarnos cualquier comentario o consulta"></textarea>
                 <input type="submit" value="Enviar">
-            </form>
+            </form> -->
         </section>
     </main>
     <aside>
-        <img src="../img/contacto.jpg">
+        <!-- <img src="../img/contacto.jpg"> -->
     </aside>
     <footer>
         <span class="footerTxt">© 2022 YacantoBike</span>
