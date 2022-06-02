@@ -1,347 +1,198 @@
-/* Reset */
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
-/* ---------------- Estructura general del sitio ---------------- */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #505D6F;
-}
-
-/*Box Style*/
-
-.topBar {
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    background-color: #4B80B1;
-    border: solid 3px #fff;
-}
-
-.sectionBlue {
-    background-color: #4B80B1;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-.sectionName {
-    background-color: #4B80B1;
-    color: #fff;
-    text-align: left;
-    padding: 10px;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.box {
-    padding: 5px 20px;
-    margin: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-
-.boxTxt {
-    text-align: center;
-}
-
-.boxParrafo {
-    padding-top: 35px
-}
-
-.boxTestimonioImg {
-    background-color: #404040;
-    color: #ffffff;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-}
-
-.boxTestimonio {
-    border: solid 1px #4B80B1;
-    border-radius: 25px;
-}
-
-aside {
-    display: none;
-}
-
-main {
-    padding: 5px 20px;
-    margin: 15px 20px;
-
-}
-
-footer {
-    height: 100px;
-    background-color: #4B80B1;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px
-}
-
-ul li {
-    background-color: #fff;
-}
-
-/* Tipografías */
-
-/* h1 {
-    font-size: 30px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 20px;
-} */
-
-
-.bold {
-    font-weight: bold;
-}
-
-
-/* Vista Mobile --- 576px*/
-
-/* Grid Home */
+@charset "UTF-8";
+/* MOBILE*/
+/*Grid Home*/
 .grillaHome {
-    display: grid;
-    grid-template-areas:
-        "topBar topBar topBar"
-        "nav nav nav"
-        "portada portada portada"
-        "info info info"
-        "texto texto texto"
-        "clima clima clima"
-        "testimonio testimonio testimonio"
-        "footer footer footer";
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: 40px 86px 200px auto auto auto auto 100px;
-}
-
-.topBar {
-    grid-area: topBar;
-}
-
-nav {
-    grid-area: nav;
-}
-
-.portada {
-    grid-area: portada;
-}
-
-.sectionBlue {
-    grid-area: info;
-}
-
-.boxClima {
-    grid-area: clima;
-}
-
-.boxTxt {
-    grid-area: texto;
-}
-
-.boxTestimonio {
-    grid-area: testimonio;
-}
-
-footer {
-    grid-area: footer;
-}
+  display: grid;
+  grid-template-areas: "topBar topBar topBar" "nav nav nav" "portada portada portada" "info info info" "texto texto texto" "clima clima clima" "testimonio testimonio testimonio" "footer footer footer";
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-rows: 40px 86px 200px auto auto auto auto 100px; }
 
 /*Grid Page*/
 .grillaPage {
-    display: grid;
-    grid-template-areas:
-        "topBar topBar topBar"
-        "nav nav nav"
-        "name name name"
-        "main main main"
-        "footer footer footer";
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: 40px 86px auto auto 100px;
-}
+  display: grid;
+  grid-template-areas: "topBar topBar topBar" "nav nav nav" "name name name" "main main main" "footer footer footer";
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-rows: 40px 86px auto auto 100px; }
 
 .topBar {
-    grid-area: topBar;
-}
+  grid-area: topBar; }
 
 nav {
-    grid-area: nav;
-}
-
-.sectionName {
-    grid-area: name;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
-
-/* Vista Desktop -- 992px */
-@media screen and (min-width:992px) {
-
-    /* Grid Home */
-    .grillaHome {
-        display: grid;
-        grid-template-areas:
-            "topBar topBar topBar topBar topBar topBar"
-            "nav nav nav nav nav nav"
-            "portada portada portada portada portada portada"
-            "info info info info info info"
-            "clima clima texto texto testimonio testimonio"
-            "footer footer footer footer footer footer";
-        grid-template-columns: (6, 1fr);
-        grid-template-rows: 40px 86px auto auto auto 100px;
-    }
-
-    .topBar {
-        grid-area: topBar;
-    }
-
-    nav {
-        grid-area: nav;
-    }
-
-    .portada {
-        grid-area: portada;
-    }
-
-    .sectionBlue {
-        grid-area: info;
-    }
-
-    .boxClima {
-        grid-area: clima;
-    }
-
-    .boxTxt {
-        grid-area: texto;
-    }
-
-    .boxTestimonio {
-        grid-area: testimonio;
-    }
-
-    footer {
-        grid-area: footer;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
-    h2 {
-        font-size: 35px;
-        font-weight: 400;
-    }
-
-    /*Grid Page*/
-
-    .grillaPage {
-        display: grid;
-        grid-template-areas:
-            "topBar topBar topBar topBar topBar topBar"
-            "nav nav nav nav nav nav"
-            "name name name name name name"
-            "main main main main main main"
-            "footer footer footer footer footer footer";
-        grid-template-columns: (6, 1fr);
-        grid-template-rows: 40px 86px auto auto 100px
-    }
-
-    .topBar {
-        grid-area: topBar;
-    }
-
-    nav {
-        grid-area: nav;
-    }
-
-    .sectionName {
-        grid-area: name;
-    }
-
-    main {
-        grid-area: main;
-    }
-
-    footer {
-        grid-area: footer;
-    }
-
-    .grillaContacto {
-        display: grid;
-        grid-template-areas:
-            "form form form form aside aside";
-        grid-template-columns: (6, 1fr);
-        grid-template-rows: auto;
-    }
-
-    form {
-        grid-area: form;
-    }
-
-    aside {
-        display: inherit;
-        grid-area: aside;
-    }
-}
-
-
-
-/* ---------------- FIN - Estructura general del sitio ---------------- */
-
-/*Portada*/
-
-.portadaImg {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+  grid-area: nav; }
 
 .portada {
+  grid-area: portada; }
+
+.sectionBlue {
+  grid-area: info; }
+
+.sectionName {
+  grid-area: name; }
+
+.boxClima {
+  grid-area: clima; }
+
+.boxTxt {
+  grid-area: texto; }
+
+.boxTestimonio {
+  grid-area: testimonio; }
+
+main {
+  grid-area: main; }
+
+aside {
+  display: none; }
+
+footer {
+  grid-area: footer; }
+
+/*DESKTOP*/
+@media screen and (min-width: 992px) {
+  /*Grid Home*/
+  .grillaHome {
+    display: grid;
+    grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "portada portada portada portada portada portada" "info info info info info info" "clima clima texto texto testimonio testimonio" "footer footer footer footer footer footer";
+    grid-template-columns: 6, 1fr;
+    grid-template-rows: 40px 86px auto auto auto 100px; }
+  /*Grid Page*/
+  .grillaPage {
+    display: grid;
+    grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "name name name name name name" "main main main main main main" "footer footer footer footer footer footer";
+    grid-template-columns: 6, 1fr;
+    grid-template-rows: 40px 86px auto auto 100px; }
+  /*Grid Contacto*/
+  .grillaContacto {
+    display: grid;
+    grid-template-areas: "form form form form aside aside";
+    grid-template-columns: 6, 1fr;
+    grid-template-rows: auto; }
+  .topBar {
+    grid-area: topBar; }
+  nav {
+    grid-area: nav; }
+  .portada {
+    grid-area: portada; }
+  .sectionBlue {
+    grid-area: info; }
+  .sectionName {
+    grid-area: name; }
+  .boxClima {
+    grid-area: clima; }
+  .boxTxt {
+    grid-area: texto; }
+  .boxTestimonio {
+    grid-area: testimonio; }
+  main {
+    grid-area: main; }
+  footer {
+    grid-area: footer; }
+  form {
+    grid-area: form; }
+  aside {
+    display: inherit;
+    grid-area: aside; } }
+
+footer {
+  height: 100px;
+  background-color: #4B80B1;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #505D6F; }
+
+.bold {
+  font-weight: bold; }
+
+/* Reset */
+* {
+  margin: 0%;
+  padding: 0%; }
+
+/*Estilos generales para seguir ordenando*/
+.topBar {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  background-color: #4B80B1; }
+
+ul li {
+  background-color: #fff; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.portada {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  display: inline-block; }
+  .portada .portadaImg {
     width: 100%;
     height: 100%;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.portadaTitulo {
+    overflow: hidden; }
+  .portada .portadaTitulo {
     width: 100%;
     position: absolute;
     top: 15%;
     text-align: center;
-    font-weight: bold;
-}
-
-.portadaSubtitutulo {
+    font-weight: bold; }
+  .portada .portadaSubtitutulo {
     width: 100%;
     position: absolute;
     top: 35%;
-    text-align: center;
-}
+    text-align: center; }
 
+.sectionBlue {
+  background-color: #4B80B1;
+  color: #fff;
+  text-align: center;
+  padding: 10px; }
+
+.sectionName {
+  background-color: #4B80B1;
+  color: #fff;
+  text-align: left;
+  padding: 10px; }
+
+.box {
+  padding: 5px 20px;
+  margin: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; }
+
+.boxTestimonioImg {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px; }
+
+.boxTestimonio {
+  border: solid 1px #4B80B1;
+  border-radius: 25px; }
+
+main {
+  padding: 5px 20px;
+  margin: 15px 20px; }
+  main .boxTxt {
+    text-align: center; }
+  main .boxParrafo {
+    padding-top: 35px; }
+  main form {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 20%; }
+
+/*Portada -- VOLVER A AGREGAR BOTÓN*/
 /* .portadaBoton {
     background-color: #ffffff;
     color: #4B80B1;
@@ -372,27 +223,13 @@ button {
     font-weight: bold;
     display: inline-block;
 } */
-
-
-
-
-/* ---------------- Video embebed ---------------- */
-
+/*Video embebed -- VOLVER A HABILITAR*/
 .cardVid {
-    position: relative;
-    margin: 20px;
-    padding-bottom: 15%;
-    overflow: hidden;
-    display: inline;
-    border-radius: 30px;
-    height: 0px;
-    width: 30%;
-}
-
-/* ---------------- Formulario de contacto ---------------- */
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 2% 20%;
-}
+  position: relative;
+  margin: 20px;
+  padding-bottom: 15%;
+  overflow: hidden;
+  display: inline;
+  border-radius: 30px;
+  height: 0px;
+  width: 30%; }

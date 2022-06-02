@@ -1,0 +1,164 @@
+/* MOBILE*/
+
+/*Grid Home*/
+.grillaHome {
+    display: grid;
+    grid-template-areas:
+        "topBar topBar topBar"
+        "nav nav nav"
+        "portada portada portada"
+        "info info info"
+        "texto texto texto"
+        "clima clima clima"
+        "testimonio testimonio testimonio"
+        "footer footer footer";
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: 40px 86px 200px auto auto auto auto 100px;
+}
+
+/*Grid Page*/
+.grillaPage {
+    display: grid;
+    grid-template-areas:
+        "topBar topBar topBar"
+        "nav nav nav"
+        "name name name"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: 40px 86px auto auto 100px;
+}
+
+
+.topBar {
+    grid-area: topBar;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.portada {
+    grid-area: portada;
+}
+
+.sectionBlue {
+    grid-area: info;
+}
+
+.sectionName {
+    grid-area: name;
+}
+
+.boxClima {
+    grid-area: clima;
+}
+
+.boxTxt {
+    grid-area: texto;
+}
+
+.boxTestimonio {
+    grid-area: testimonio;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*DESKTOP*/
+@media screen and (min-width:992px) {
+
+    /*Grid Home*/
+    .grillaHome {
+        display: grid;
+        grid-template-areas:
+            "topBar topBar topBar topBar topBar topBar"
+            "nav nav nav nav nav nav"
+            "portada portada portada portada portada portada"
+            "info info info info info info"
+            "clima clima texto texto testimonio testimonio"
+            "footer footer footer footer footer footer";
+        grid-template-columns: (6, 1fr);
+        grid-template-rows: 40px 86px auto auto auto 100px;
+    }
+
+    /*Grid Page*/
+    .grillaPage {
+        display: grid;
+        grid-template-areas:
+            "topBar topBar topBar topBar topBar topBar"
+            "nav nav nav nav nav nav"
+            "name name name name name name"
+            "main main main main main main"
+            "footer footer footer footer footer footer";
+        grid-template-columns: (6, 1fr);
+        grid-template-rows: 40px 86px auto auto 100px
+    }
+
+    /*Grid Contacto*/
+    .grillaContacto {
+        display: grid;
+        grid-template-areas:
+            "form form form form aside aside";
+        grid-template-columns: (6, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .topBar {
+        grid-area: topBar;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    .portada {
+        grid-area: portada;
+    }
+
+    .sectionBlue {
+        grid-area: info;
+    }
+    
+    .sectionName {
+        grid-area: name;
+    }
+
+    .boxClima {
+        grid-area: clima;
+    }
+
+    .boxTxt {
+        grid-area: texto;
+    }
+
+    .boxTestimonio {
+        grid-area: testimonio;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    form {
+        grid-area: form;
+    }
+
+    aside {
+        display: inherit;
+        grid-area: aside;
+    }
+}
