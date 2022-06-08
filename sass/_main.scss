@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    padding: 5px 20px;
+    margin: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.boxTestimonioImg {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.boxBorderBlue {
+    border: solid 1px color(blockBlue);
+    border-radius: 25px;
+}
+
+.boxTxt {
+    text-align: center;
+}
+
+main {
+    padding: 5px 20px;
+    margin: 15px 20px;
+
+    .boxParrafo {
+        padding-top: 35px
+    }
+    
+    section {
+        .boxForm {
+            @extend .boxBorderBlue;
+            display: flex;
+            flex-direction: column;
+            padding: 2% 20%;
+        }
+}
+}
+
+.sectionName {
+    @include contenedorBlue;
+    text-align: left;
+}
+
+.sectionBlue {
+    @include contenedorBlue;
+    text-align: center;
+}
+

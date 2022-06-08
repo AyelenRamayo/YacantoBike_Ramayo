@@ -1,0 +1,41 @@
+@import "variables";
+
+ul li {
+    background-color: color(blockWhite);
+}
+
+.topBar {
+    color: color(fontAccent);
+    text-align: center;
+    font-size: 16px;
+    background-color: color(blockBlue);
+}
+
+.portada {
+    width: 100%;
+    height: 100%;
+    color: color(fontAccent);
+    position: relative;
+    display: inline-block;
+
+    .portadaImg {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .portadaTitulo {
+        width: 100%;
+        position: absolute;
+        top: 15%;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .portadaSubtitutulo {
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+    }
+}

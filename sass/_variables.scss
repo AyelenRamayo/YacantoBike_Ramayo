@@ -1,3 +1,7 @@
-$blockPrimary:#4B80B1;
-$fontPrimary:#505D6F;
-$fontSecondary:#fff;
+//Map Colors
+$color:(blockBlue:#4B80B1,blockWhite:#fff, fontPrimary:#505D6F, fontAccent:#fff);
+
+//Map-get para reutilizar colores
+@function color($color-name){
+    @return map-get($color, $color-name)
+}
