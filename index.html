@@ -12,8 +12,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
-  <meta name="description" content="Alquiler de bicicletas por día para pasear en familia o realizar una aventura única Villa Yacanto de Calamuchita">
-  <meta name="keywords"  content="Yacanto Bike, alquiler de bicicletas, mountain bike, Villa Yacanto de Calamuchita, cicloturismo, sierras de Córdoba">
+  <meta name="description"
+    content="Alquiler de bicicletas por día para pasear en familia o realizar una aventura única Villa Yacanto de Calamuchita">
+  <meta name="keywords"
+    content="Yacanto Bike, alquiler de bicicletas, mountain bike, Villa Yacanto de Calamuchita, cicloturismo, sierras de Córdoba">
   <title>Yacanto Bike</title>
 </head>
 
@@ -27,7 +29,7 @@
 
   <!--BS Navegador Responsive-->
 
-  <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color:#fff;">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html"><img src="./img/logo-yacanto-bike.png" alt="Logo Yacanto Bike"
           title="Logo Yacanto Bike"></a>
@@ -62,11 +64,10 @@
       title="portada - Ciclistas recorriendo Villa Yacanto" alt="imagen-de-portada">
     <h1 class="portadaTitulo">Viví una experiencia única</h1>
     <h2 class="portadaSubtitutulo">Recorré Villa Yacanto en bicicleta</h2>
-    <button class="button">Reservar</button>
-    <!-- <button class="portadaBoton">Reservar</button> -->
+    <a href="./pages/Contacto.html"><button class="button btnWhite">Reservar</button></a>
   </section>
   <section class="sectionBlue">
-    <h3>Conocé nuestras mountain bikes</h3>
+    <h2>Conocé nuestras mountain bikes</h2>
   </section>
   <section class="box boxClima">
     <a target="_blank" href="https://hotelmix.es/weather/villa-yacanto-112432"><img
@@ -74,75 +75,83 @@
         alt="booked.net" /></a>
   </section>
   <section class="box boxTxt">
-    <h2><span class="bold">¡Llevamos las bicicletas a tu cabaña!</span></h2>
-    <h2>Alquiler por día para pasear en familia o realizar una aventura serrana.</h2>
+    <h3><span class="bold">¡Llevamos las bicicletas a tu cabaña!</span></h3>
+    <h3>Alquiler por día para pasear en familia o realizar una aventura serrana.</h3>
   </section>
 
   <!-- BS Modal & Carrusel-->
 
-  <section class="box boxBorderBlue">
-    <img class="boxTestimonioImg" src="./img/juan.jpg" alt="Retrato de cliente Juan">
-    <p class="testimonioUserName">@juan.23</p>
-    <p>¡Excelente experiencia!</p>
-    <p>Fuimos hasta San Miguel de los Ríos y ...</p>
-    <button type="button" class="btn btn-outline-primary btn-sm"" data-bs-toggle="modal"
-      data-bs-target="#exampleModal">
-      Más experiencias
-    </button>
+  <section class="box boxTestimonio">
+      <img class="boxTestimonioImg" src="./img/juan.jpg" alt="Retrato de cliente Juan">
+      <p class="testimonioUserName">@juan.23</p>
+      <p>¡Excelente experiencia!</p>
+      <p>Fuimos hasta San Miguel de los Ríos y ...</p>
+      <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle=" modal"
+        data-bs-target="#exampleModal">
+        Más experiencias
+      </button>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Experiencias</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Experiencias</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./img/Testimonios 1.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>@juan.23</h5>
+                    <p class="bold">¡Excelente experiencia!</p>
+                    <p>Fuimos hasta San Miguel de los Ríos y pasamos el día en el paraje. ¡Los chicos son súper amables!
+                      Entregaron y retiraron las bicis en la cabaña donde nos alojamos.</p>
+                  </div>
                 </div>
-                <div class="modal-body">
-                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./img/Testimonios 1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>@juan.23</h5>
-                          <p class="bold">¡Excelente experiencia!</p>
-                          <p>Fuimos hasta San Miguel de los Ríos y pasamos el día en el paraje. ¡Los chicos son súper amables! Entregaron y retiraron las bicis en la cabaña donde nos alojamos.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/Testimonios 2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>@milidiez</h5>
-                          <p>¡Increible!</p>
-                          <p>Paseamos por el pueblo en bici y llegamos hasta el Jesús de Los Linderos. Las bicis son hermosas y la atención excelente.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/Testimonios 3.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>@guadamonsalves</h5>
-                          <p>Vivimos un día único</p>
-                          <p>Salimos al mediodía para El Durazno con las bicis y las amamos al instante. Fue una hermosa manera de conocer Villa Yacanto.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
+                <div class="carousel-item">
+                  <img src="./img/Testimonios 2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>@milidiez</h5>
+                    <p>¡Increible!</p>
+                    <p>Paseamos por el pueblo en bici y llegamos hasta el Jesús de Los Linderos. Las bicis son hermosas
+                      y la atención excelente.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/Testimonios 3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>@guadamonsalves</h5>
+                    <p>Vivimos un día único</p>
+                    <p>Salimos al mediodía para El Durazno con las bicis y las amamos al instante. Fue una hermosa
+                      manera de conocer Villa Yacanto.</p>
                   </div>
                 </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
   </section>
   <footer>
     <span>© 2022 YacantoBike</span>

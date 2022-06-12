@@ -1,4 +1,4 @@
-@import "variables";
+@import "base";
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -7,4 +7,31 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+h1 {
+    font-size: size(h1m);
+}
+
+h2 {
+    font-size: size(h2m);
+}
+
+h3 {
+    font-size: size(h3m);
+}
+
+@media screen and (min-width:$desktop) {
+    h1 {
+        font-size: size(h1d);
+    }
+    
+    h2 {
+        font-size: size(h2d);
+    }
+    
+    h3 {
+        font-size: size(h3d);
+    }
+    
 }

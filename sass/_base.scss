@@ -1,0 +1,37 @@
+// RESET
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+//VARIABLES
+
+//Breakpoints
+$mobile: 576px;
+$tablet: 762px; 
+$desktop:992px;
+
+//Colores - mapa para reutilizar colores
+$color:(blockBlue:#4B80B1, blockWhite:#fff, fontPrimary:#505D6F, fontAccent:#fff);
+@function color($color-name) {
+    @return map-get($color, $color-name);
+}
+
+//Fuentes - mapa para reutilizar tamaños de fuente
+$size:(h1m:34px, h2m:20px, h3m:16px, h1d:45px, h2d:28px, h3d:20px); 
+@function size($size-valor) {
+    @return map-get($size, $size-valor);
+}
+
+//MIXINS
+
+@mixin contenedorBlue {
+    background-color: color(blockBlue);
+    color: color(fontAccent);
+    padding: 15px;
+ }
+
+ @mixin boxSpaces {
+    padding: 10px;
+    margin: 15px 20px;
+ }

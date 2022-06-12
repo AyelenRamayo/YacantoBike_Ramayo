@@ -1,52 +1,12 @@
-@import "variables";
-@import "grids";
+// partials estructurales
+@import "base";
 @import "fonts";
+
+// partials layout
+@import "grids";
 @import "main";
 @import "footer";
 @import "header";
-@import "mixins";
 
-/* Reset */
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
-.button {
-    padding: 5px;
-    width: 228px;
-    height: 38px;
-    border-radius: 20px;
-    border-color: transparent;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    background-color: #ffffff;
-    color: #4B80B1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    transition: transform 3s;
-}
-
-.button:hover {
-    background-color: #4B80B1;
-    color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%) scale(1.2) ;
-}
-
-.cardVid {
-    position: relative;
-    margin: 20px;
-    padding-bottom: 15%;
-    overflow: hidden;
-    display: inline;
-    border-radius: 30px;
-    height: 0px;
-    width: 30%;
-}
+//partial componentes
+@import "components";

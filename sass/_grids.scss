@@ -1,6 +1,7 @@
-/* MOBILE*/
+@import "base";
 
-/*Grid Home*/
+/* MOBILE y TABLET*/
+// Grilla Home
 .grillaHome {
     display: grid;
     grid-template-areas:
@@ -14,9 +15,10 @@
         "footer footer footer";
     grid-template-columns: repeat (3, 1fr);
     grid-template-rows: 40px 86px 200px auto auto auto auto 100px;
+
 }
 
-/*Grid Page*/
+// Grilla page
 .grillaPage {
     display: grid;
     grid-template-areas:
@@ -29,53 +31,12 @@
     grid-template-rows: 40px 86px auto auto 100px;
 }
 
-
-.topBar {
-    grid-area: topBar;
-}
-
-nav {
-    grid-area: nav;
-}
-
-.portada {
-    grid-area: portada;
-}
-
-.sectionBlue {
-    grid-area: info;
-}
-
-.sectionName {
-    grid-area: name;
-}
-
-.boxClima {
-    grid-area: clima;
-}
-
-.boxTxt {
-    grid-area: texto;
-}
-
-.boxTestimonio {
-    grid-area: testimonio;
-}
-
-main {
-    grid-area: main;
-}
-
 aside {
     display: none;
 }
 
-footer {
-    grid-area: footer;
-}
-
 /*DESKTOP*/
-@media screen and (min-width:992px) {
+@media screen and (min-width: $desktop) {
 
     /*Grid Home*/
     .grillaHome {
@@ -104,61 +65,16 @@ footer {
         grid-template-rows: 40px 86px auto auto 100px
     }
 
-    /*Grid Contacto*/
+    // Grilla contacto
     .grillaContacto {
         display: grid;
         grid-template-areas:
-            "form form form form aside aside";
-        grid-template-columns: (6, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .topBar {
-        grid-area: topBar;
-    }
-
-    nav {
-        grid-area: nav;
-    }
-
-    .portada {
-        grid-area: portada;
-    }
-
-    .sectionBlue {
-        grid-area: info;
-    }
-    
-    .sectionName {
-        grid-area: name;
-    }
-
-    .boxClima {
-        grid-area: clima;
-    }
-
-    .boxTxt {
-        grid-area: texto;
-    }
-
-    .boxTestimonio {
-        grid-area: testimonio;
-    }
-
-    main {
-        grid-area: main;
-    }
-
-    footer {
-        grid-area: footer;
-    }
-
-    form {
-        grid-area: form;
+            "form form aside";
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: 40px 86px auto auto 100px;
     }
 
     aside {
         display: inherit;
-        grid-area: aside;
     }
 }
