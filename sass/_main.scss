@@ -4,9 +4,10 @@
 .box {
     @include boxSpaces;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
+    justify-content: center;
 }
 
 .boxClima {
@@ -21,20 +22,35 @@
     text-align: center;
 }
 
-.boxTestimonio {
+.boxRedes {
+    grid-area: instagram;
+    @include boxSpaces;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px color(blockBlue);
-    border-radius: 25px;
+    text-align: center;
 
-    .boxTxt {
-        text-align: center;
+    .snapwidget-widget {
+        border-radius: 50px;
+        border:none;
+        overflow:hidden; 
+        width:80%;
     }
-    .boxTestimonioImg {
-        border-radius: 50%;
-        height: 80px;
-        width: 80px;
+
+    a {
+        background-color: rgba(75, 128, 177, 0.5);
+        position: absolute;
+        transform: translate(-50);
+        color:color(color2);
+
+
+        .icon {
+            padding-right: 5px;
+        }
+    }
+
+    a:hover {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -56,12 +72,13 @@ main {
     @include boxSpaces;
 
     .boxParrafo {
-        padding-top: 35px
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            width: 60%;
+        }
     }
 }
-
-aside {
-    grid-area: aside;
-}
-
-

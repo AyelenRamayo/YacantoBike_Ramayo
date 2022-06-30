@@ -9,10 +9,10 @@
 //Breakpoints
 $mobile: 576px;
 $tablet: 762px; 
-$desktop:992px;
+$desktop: 992px;
 
 //Colores - mapa para reutilizar colores
-$color:(blockBlue:#4B80B1, blockWhite:#fff, fontPrimary:#505D6F, fontAccent:#fff);
+$color:(color1:#4B80B1, color2:#fff, color3:#505D6F);
 @function color($color-name) {
     @return map-get($color, $color-name);
 }
@@ -26,12 +26,17 @@ $size:(h1m:34px, h2m:20px, h3m:16px, h1d:45px, h2d:28px, h3d:20px);
 //MIXINS
 
 @mixin contenedorBlue {
-    background-color: color(blockBlue);
-    color: color(fontAccent);
+    background-color: color(color1);
+    color: color(color2);
     padding: 15px;
  }
 
  @mixin boxSpaces {
     padding: 10px;
     margin: 15px 20px;
+ }
+
+ @mixin borderBlue {
+    border: solid 1px color(color1);
+    border-radius: 25px;    
  }

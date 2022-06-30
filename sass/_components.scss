@@ -1,12 +1,33 @@
 // Navegador
+
+ul li {
+    background-color: color(color2);
+}
 nav {
     grid-area: nav;
-    background-color: color(blockWhite);
+    background-color: color(color2);
+
+    .container-fluid {
+        #navbarSupportedContent {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: color(color1);
+                        padding: 20px;
+                        font-weight: bold;
+                    }
+
+                    .nav-link:hover {
+                        color: color(color2);
+                        background-color: color(color1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Botones
-
-
 .button {
     margin: 15px;
     padding: 2px;
@@ -17,16 +38,13 @@ nav {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-
-    a {
-        text-decoration: none;
-    }
+    text-decoration: none;
 }
 
-.btnWhite{
+.btnWhite {
     @extend .button;
-    background-color: color(fontAccent);
-    color: color(blockBlue);
+    background-color: color(color2);
+    color: color(color1);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,20 +52,92 @@ nav {
     transition: transform 3s;
 }
 
-.btnWhite:hover{
-    background-color: color(blockBlue);
-    color: color(fontAccent);
+.btnWhite:hover {
+    background-color: color(color1);
+    color: color(color2);
 }
 
 .btnBlue {
     @extend .button;
-    background-color: color(blockBlue);
-    color: color(fontAccent);
+    background-color: color(color1);
+    color: color(color2);
+}
+
+.btnOutliner {
+    margin-top: 15px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    border-color: transparent;
+    border: 2px solid color(color1);
+    background-color: color(color2);
+    color: color(color1);
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+// Breadcrumb
+.sectionName {
+    .breadcrumb {
+        .breadcrumb-item {
+            color: color(color2);
+
+            a {
+                text-decoration: none;
+                color: color(color2);
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 // Formulario
-form {
+.form {
+    width: 100%;
     grid-area: form;
-    display: flex;
-    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin: 0 50px;
+        @include borderBlue;
+
+        label {
+            margin-top: 15px;
+        }
+
+        .checkboxFlex {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+
+            .checkbox {
+                width: 20%;
+
+                .inputCheckbox {
+                    align-content: center;
+                    justify-content: center;
+                }
+
+                .inputCheckbox {
+                    align-content: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            @include borderBlue;
+        }
+    }
+
 }

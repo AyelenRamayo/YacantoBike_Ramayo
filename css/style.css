@@ -37,7 +37,7 @@ h3 {
 /* MOBILE y TABLET*/
 .grillaHome {
   display: grid;
-  grid-template-areas: "topBar topBar topBar" "nav nav nav" "portada portada portada" "info info info" "texto texto texto" "clima clima clima" "testimonio testimonio testimonio" "footer footer footer";
+  grid-template-areas: "topBar topBar topBar" "nav nav nav" "portada portada portada" "info info info" "texto texto texto" "clima clima clima" "instagram instagram instagram" "footer footer footer";
   grid-template-columns: repeat 3, 1fr;
   grid-template-rows: 40px 86px 200px auto auto auto auto 100px; }
 
@@ -55,7 +55,7 @@ aside {
   /*Grid Home*/
   .grillaHome {
     display: grid;
-    grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "portada portada portada portada portada portada" "info info info info info info" "clima clima texto texto testimonio testimonio" "footer footer footer footer footer footer";
+    grid-template-areas: "topBar topBar topBar topBar topBar topBar" "nav nav nav nav nav nav" "portada portada portada portada portada portada" "info info info info info info" "clima clima texto texto instagram instagram" "footer footer footer footer footer footer";
     grid-template-columns: 6, 1fr;
     grid-template-rows: 40px 86px auto auto auto 100px; }
   /*Grid Page*/
@@ -68,9 +68,12 @@ aside {
     display: grid;
     grid-template-areas: "form form aside";
     grid-template-columns: repeat 3, 1fr;
-    grid-template-rows: 40px 86px auto auto 100px; }
+    grid-template-rows: 100%; }
   aside {
-    display: inherit; } }
+    grid-area: aside;
+    display: inherit; }
+    aside img {
+      height: 100%; } }
 
 * {
   margin: 0%;
@@ -82,7 +85,8 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  justify-content: center; }
 
 .boxClima {
   grid-area: clima; }
@@ -94,18 +98,28 @@ aside {
   align-items: center;
   text-align: center; }
 
-.boxTestimonio {
+.boxRedes {
+  grid-area: instagram;
+  padding: 10px;
+  margin: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px #4B80B1;
-  border-radius: 25px; }
-  .boxTestimonio .boxTxt {
-    text-align: center; }
-  .boxTestimonio .boxTestimonioImg {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px; }
+  text-align: center; }
+  .boxRedes .snapwidget-widget {
+    border-radius: 50px;
+    border: none;
+    overflow: hidden;
+    width: 80%; }
+  .boxRedes a {
+    background-color: rgba(75, 128, 177, 0.5);
+    position: absolute;
+    transform: translate(-50);
+    color: #fff; }
+    .boxRedes a .icon {
+      padding-right: 5px; }
+  .boxRedes a:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
 
 .sectionBlue {
   grid-area: info;
@@ -126,10 +140,12 @@ main {
   padding: 10px;
   margin: 15px 20px; }
   main .boxParrafo {
-    padding-top: 35px; }
-
-aside {
-  grid-area: aside; }
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .boxParrafo p {
+      width: 60%; }
 
 footer {
   grid-area: footer;
@@ -144,9 +160,6 @@ footer {
 * {
   margin: 0%;
   padding: 0%; }
-
-ul li {
-  background-color: #fff; }
 
 .topBar {
   grid-area: topBar;
@@ -182,9 +195,27 @@ ul li {
     display: none;
     color: #4B80B1; }
 
+.containerPortada {
+  display: flex;
+  flex-direction: row;
+  align-content: center; }
+  .containerPortada .containerPortadaImg {
+    width: 100%;
+    margin-bottom: 20px; }
+
+ul li {
+  background-color: #fff; }
+
 nav {
   grid-area: nav;
   background-color: #fff; }
+  nav .container-fluid #navbarSupportedContent .navbar-nav .nav-item .nav-link {
+    color: #4B80B1;
+    padding: 20px;
+    font-weight: bold; }
+  nav .container-fluid #navbarSupportedContent .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    background-color: #4B80B1; }
 
 .button, .btnWhite, .btnBlue {
   margin: 15px;
@@ -195,9 +226,8 @@ nav {
   border-color: transparent;
   text-align: center;
   font-size: 20px;
-  font-weight: bold; }
-  .button a, .btnWhite a, .btnBlue a {
-    text-decoration: none; }
+  font-weight: bold;
+  text-decoration: none; }
 
 .btnWhite {
   background-color: #fff;
@@ -216,7 +246,55 @@ nav {
   background-color: #4B80B1;
   color: #fff; }
 
-form {
-  grid-area: form;
-  display: flex;
-  flex-direction: column; }
+.btnOutliner {
+  margin-top: 15px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 20px;
+  border-color: transparent;
+  border: 2px solid #4B80B1;
+  background-color: #fff;
+  color: #4B80B1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none; }
+
+.sectionName .breadcrumb .breadcrumb-item {
+  color: #fff; }
+  .sectionName .breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: #fff; }
+  .sectionName .breadcrumb .breadcrumb-item a:hover {
+    text-decoration: underline; }
+
+.form {
+  width: 100%;
+  grid-area: form; }
+  .form form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0 50px;
+    border: solid 1px #4B80B1;
+    border-radius: 25px; }
+    .form form label {
+      margin-top: 15px; }
+    .form form .checkboxFlex {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center; }
+      .form form .checkboxFlex .checkbox {
+        width: 20%; }
+        .form form .checkboxFlex .checkbox .inputCheckbox {
+          align-content: center;
+          justify-content: center; }
+        .form form .checkboxFlex .checkbox .inputCheckbox {
+          align-content: center;
+          justify-content: center; }
+    .form form .input {
+      width: 100%;
+      padding: 10px;
+      border: solid 1px #4B80B1;
+      border-radius: 25px; }
